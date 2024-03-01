@@ -1,7 +1,14 @@
 {
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/.*", "dest": "/index.html" }
+  "headers": [
+    {
+      "source": "/(.*).(html|js|css)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
+      ]
+    }
   ]
 }
