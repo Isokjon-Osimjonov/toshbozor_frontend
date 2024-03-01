@@ -1,3 +1,4 @@
+//applayout.js
 import React from "react";
 import './applayout.css'
 import Navbar from "../components/navbar/Navbar";

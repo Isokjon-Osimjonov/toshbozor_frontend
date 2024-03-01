@@ -1,3 +1,4 @@
+//navbar.js
 import React from "react";
 import "./navbar.css";
 import Logo from "../../assets/logo.svg";
