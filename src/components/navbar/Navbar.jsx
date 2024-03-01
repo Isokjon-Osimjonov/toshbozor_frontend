@@ -15,6 +15,7 @@ const Navbar = () => {
       <NavLink to={"/"}>
         <img className="nav_logo" src={Logo} alt="LLC Logo" />
       </NavLink>
+
       <ul>
         {NAV_TABS?.map((item) => (
           <NavLink
@@ -26,6 +27,7 @@ const Navbar = () => {
           </NavLink>
         ))}
       </ul>
+
       <button className="nav_order_btn"> Buyurtma berish</button>
     </nav>
   );

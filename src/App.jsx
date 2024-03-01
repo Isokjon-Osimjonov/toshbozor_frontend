@@ -12,7 +12,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import AppLayuot from "./ui/AppLayuot";
+import AppLayuot from "./app/AppLayuot";
 
 const router = createBrowserRouter([
   {
@@ -39,7 +39,6 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  // const [activeNav, setActiveNav] = useState("b");
   return <RouterProvider router={router} />;
 }
 
