@@ -1,8 +1,7 @@
 //applayout.js
-import React from "react";
 import './applayout.css'
 import Navbar from "../components/navbar/Navbar";
-import Footer from "../pages/main/_footer/Footer";
+import Footer from "../components/footer/Footer";
 import { Outlet } from "react-router-dom";
 const AppLayuot = () => {
   return (

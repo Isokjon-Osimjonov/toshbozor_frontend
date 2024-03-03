@@ -1,0 +1,392 @@
+.hero_section {
+  width: var(--width-lg);
+  max-width: var(--max-width);
+  height: 600px;
+  background-color: var(--primary-bg);
+  border-radius: var(--br-16);
+  background-image: url(../../assets/bc_blur.svg);
+  background-repeat: no-repeat;
+  backdrop-filter: blur(5px);
+  backdrop-filter: sepia(5%);
+  margin: auto;
+  margin-top: 0.938em;
+  display: flex;
+  padding: 0px 80px;
+  justify-content: space-between;
+  align-items: center;
+  background-position: center;
+}
+h1 > b {
+  color: var(--primary-color-500);
+}
+.hero_order_btn_mobile {
+  display: none;
+}
+
+.wrapper {
+  display: flex;
+  width: 1220px;
+  justify-content: space-between;
+}
+.right_side {
+  width: 40%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 100px;
+}
+.left_side {
+  width: 60%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.left_side p {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+  color: var(--primary-color-500);
+}
+
+h1 {
+  font-size: 3.3em;
+  color: var(--secondary-color-900);
+}
+
+.hero_order_btn {
+  width: 240px;
+  height: 60px;
+  border-radius: var(--br-10);
+  background-color: var(--primary-color-500);
+  box-shadow: var(--cta-btn-shadow);
+  color: var(--white-text);
+  border: none;
+  cursor: pointer;
+  font-size: 1.4em;
+  font-weight: 500;
+  margin-top: 70px;
+}
+
+.hero_paving_img {
+  width: 50%;
+  
+  margin-right: 15px;
+  filter: drop-shadow(20px 20px 5px rgba(227, 209, 160, 0.3));
+  border-radius: var(--br-16);
+}
+.hero_marble_img {
+  width: 60%;
+  border-radius: var(--br-16);
+  margin-top: 100px;
+}
+
+/* =================================MEDIA============================ */
+
+@media screen and (min-width: 300px) and (max-width: 480px) {
+  .hero_section {
+    width: var(--width-sm);
+    min-height: 400px;
+    height: auto;
+    background-color: var(--primary-bg);
+    border-radius: var(--br-10);
+    background-repeat: no-repeat;
+    backdrop-filter: blur(5px);
+    backdrop-filter: sepia(5%);
+    padding: 20px 10px;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hero_order_btn {
+    display: none;
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* height: 400px; */
+  }
+  .right_side {
+    width: 100%;
+    height: fit-content;
+    padding: 30px 0px 0px 0px;
+  }
+  .left_side {
+    width: 100%;
+    height: 100px;
+  }
+  .left_side p {
+    font-size: 1em;
+    color: var(--primary-color-500);
+    margin: 20px 0px 10px 0px;
+    text-align: center;
+  }
+
+  h1 {
+    color: var(--secondary-color-900);
+    font-size: 6vw;
+    text-align: center;
+    margin: auto;
+  }
+
+  .hero_order_btn {
+    width: 145px;
+    height: 40px;
+    border-radius: var(--br-8);
+    background-color: var(--primary-color-500);
+    font-size: 0.8em;
+    color: var(--white-text);
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    box-shadow: var(--cta-btn-shadow);
+  }
+
+  .hero_paving_img {
+    width: 130px;
+    margin-right: 20px;
+    filter: drop-shadow(20px 20px 5px rgba(227, 209, 160, 0.3));
+    border-radius: var(--br-10);
+  }
+  .hero_marble_img {
+    width: 130px;
+    border-radius: var(--br-10);
+    margin-top: 120px;
+  }
+
+  .hero_order_btn_mobile {
+    display: block;
+    width: 170px;
+    height: 45px;
+    border-radius: var(--br-6);
+    background-color: var(--primary-color-500);
+    font-size: 1em;
+    color: var(--white-text);
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    box-shadow: var(--cta-btn-shadow);
+    margin: 100px 0px 40px 0px;
+    align-self: center;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .hero_section {
+    width: var(--width-sm);
+    min-height: 380px;
+    height: auto;
+    border-radius: var(--br-12);
+    background-size: contain;
+    padding: 0px 20px;
+    justify-content: space-between !important;
+  }
+
+  .wrapper {
+    display: flex;
+    width: 1060px;
+    justify-content: space-between;
+  }
+  .right_side {
+    width: 40%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+  }
+  .left_side {
+    width: 60%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .left_side p {
+    font-size: 0.9em;
+    color: var(--primary-color-500);
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    color: var(--secondary-color-900);
+    font-size: 4vw;
+  }
+
+  .hero_order_btn {
+    width: 145px;
+    height: 40px;
+    border-radius: var(--br-8);
+    background-color: var(--primary-color-500);
+    font-size: 0.8em;
+    color: var(--white-text);
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    box-shadow: var(--cta-btn-shadow);
+    margin-top: 50px;
+  }
+
+  .hero_paving_img {
+    width: 50%;
+    margin-right: 10px;
+    filter: drop-shadow(20px 20px 5px rgba(227, 209, 160, 0.3));
+    border-radius: var(--br-16);
+  }
+  .hero_marble_img {
+    width: 50%;
+    border-radius: var(--br-16);
+    margin-top: 50px;
+  }
+
+  .hero_order_btn_mobile {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .hero_section {
+    width: var(--width-md);
+    min-height: 380px;
+    height: auto;
+    border-radius: var(--br-14);
+    background-size: cover;
+    background-position: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+  }
+  .wrapper {
+    display: flex;
+    width: 1060px;
+    justify-content: space-between;
+  }
+  .right_side {
+    width: 40%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+  }
+  .left_side {
+    width: 60%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .left_side p {
+    font-size: 1em;
+    color: var(--primary-color-500);
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    color: var(--secondary-color-900);
+    font-size: 3.6vw;
+  }
+
+  .hero_order_btn {
+    width: 160px;
+    height: 45px;
+    border-radius: var(--br-8);
+    background-color: var(--primary-color-500);
+    font-size: 1em;
+    color: var(--white-text);
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    box-shadow: var(--cta-btn-shadow);
+    margin-top: 50px;
+  }
+
+  .hero_paving_img {
+    width: 60%;
+    margin-right: 10px;
+    filter: drop-shadow(20px 20px 5px rgba(227, 209, 160, 0.3));
+    border-radius: var(--br-16);
+  }
+  .hero_marble_img {
+    width: 60%;
+    border-radius: var(--br-16);
+    margin-top: 90px;
+  }
+
+  .hero_order_btn_mobile {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .hero_section {
+    width: var(--width-lg);
+    min-height: 600px;
+    height: auto;
+    border-radius: var(--br-14);
+    background-position: center;
+    justify-content: space-between;
+    padding: 0px 60px;
+  }
+  .wrapper {
+    display: flex;
+    width: 1060px;
+    justify-content: space-between;
+  }
+  .right_side {
+    width: 40%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 100px;
+  }
+  .left_side {
+    width: 60%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .left_side p {
+    font-size: 1.4em;
+    color: var(--primary-color-500);
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    color: var(--secondary-color-900);
+    font-size: 3.9vw;
+  }
+
+  .hero_order_btn {
+    width: 200px;
+    height: 50px;
+    border-radius: var(--br-10);
+    background-color: var(--primary-color-500);
+    font-size: 1.1em;
+    color: var(--white-text);
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    box-shadow: var(--cta-btn-shadow);
+    margin-top: 50px;
+  }
+
+  .hero_paving_img {
+    width: 60%;
+    margin-right: 10px;
+    filter: drop-shadow(20px 20px 5px rgba(227, 209, 160, 0.3));
+    border-radius: var(--br-16);
+  }
+  .hero_marble_img {
+    width: 60%;
+    border-radius: var(--br-16);
+    margin-top: 130px;
+  }
+
+  .hero_order_btn_mobile {
+    display: none;
+  }
+}

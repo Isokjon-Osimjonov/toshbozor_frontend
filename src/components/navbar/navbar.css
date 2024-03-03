@@ -19,6 +19,7 @@
 .nav_bar > ul {
   display: flex;
   gap: 30px;
+  font-size: 1rem;
 }
 
 .active {
@@ -34,8 +35,25 @@
   font-size: 1.125rem;
 }
 
+.nav_order_btn {
+  width: 180px;
+  height: 45px;
+  color: var(--white-text);
+  padding: 0.75rem 1.2rem;
+  border-radius: var(--br-10);
+  cursor: pointer;
+  background-color: var(--primary-color-500);
+  font-size: 1.125rem;
+}
+
+.order_btn_burger_menu,
+.burger_menu,
+.nav_order_btn_mobile {
+  display: none;
+}
+
 /* =================================MEDIA============================ */
-@media screen and (min-width: 320px) and (max-width: 480px) {
+@media screen and (min-width: 200px) and (max-width: 480px) {
   .nav_bar {
     width: var(--width-sm);
     height: 46px;
@@ -43,29 +61,68 @@
     border-radius: var(--br-10);
     margin: auto;
     margin-top: 1.25rem;
-    padding: 0px 30px;
+    padding: 0px 10px;
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
   }
 
   .nav_logo {
-    width: 80px;
+    width: 100px;
+    height: 20px;
+    margin-top: 3px;
   }
-
   .nav_bar > ul {
+    display: none;
+  }
+  .nav_order_btn {
+    display: none;
+  }
+  .order_btn_burger_menu {
     display: flex;
-    gap: 30px;
+    gap: 10px;
   }
-
+  .nav_order_btn_mobile {
+    display: flex;
+    width: 28px;
+    height: 28px;
+    display: grid;
+    place-items: center;
+    background-color: var(--primary-color-500);
+    border-radius: var(--br-4);
+  }
+  .burger_menu {
+    width: 230px;
+    height: 100%;
+    background-color: var(--primary-color-500);
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 70px 0px 0px 40px;
+  }
+  .menu_tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    font-size: 1.2rem;
+  }
   .active {
-    color: var(--primary-color-500);
+    color: var(--white-text);
   }
-
-  .disabled {
-    color: var(--secondary-color-900);
+  .menu_close_btn {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    cursor: pointer;
+    width: 50px;
   }
-
-  .nav_link {
-    color: var(--secondary-color-900);
-    font-size: 1.125rem;
+  .menu_logo {
+    width: 130px;
   }
 }
 
@@ -74,15 +131,20 @@
     width: var(--width-sm);
     height: 54px;
     border-radius: var(--br-12);
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
   }
 
   .nav_logo {
-    width: 180px;
+    width: 120px;
+    margin-top: 5px;
   }
 
   .nav_bar > ul {
     display: flex;
-    gap: 30px;
+    gap: 10px;
+    font-size: 0.7rem;
   }
 
   .active {
@@ -93,9 +155,16 @@
     color: var(--secondary-color-900);
   }
 
-  .nav_link {
-    color: var(--secondary-color-900);
-    font-size: 1.125rem;
+  .nav_order_btn {
+    width: 120px;
+    height: 35px;
+    color: var(--white-text);
+    border-radius: var(--br-6);
+    cursor: pointer;
+    background-color: var(--primary-color-500);
+    font-size: 0.7rem;
+    display: grid;
+    place-items: center;
   }
 }
 
@@ -104,15 +173,18 @@
     width: var(--width-md);
     height: 62px;
     border-radius: var(--br-14);
+    padding: 0px 15px;
   }
 
   .nav_logo {
-    width: 180px;
+    width: 140px;
+    margin-top: 5px;
   }
 
   .nav_bar > ul {
     display: flex;
-    gap: 30px;
+    gap: 10px;
+    font-size: 0.8rem;
   }
 
   .active {
@@ -125,7 +197,19 @@
 
   .nav_link {
     color: var(--secondary-color-900);
-    font-size: 1.125rem;
+    font-size: 1rem;
+  }
+
+  .nav_order_btn {
+    width: 120px;
+    height: 40px;
+    color: var(--white-text);
+    border-radius: var(--br-6);
+    cursor: pointer;
+    background-color: var(--primary-color-500);
+    font-size: 0.7rem;
+    display: grid;
+    place-items: center;
   }
 }
 
@@ -135,5 +219,42 @@
     height: 70px;
     background-color: var(--primary-bg);
     border-radius: var(--br-16);
+    padding: 0px 30px;
+
+  }
+   .nav_logo {
+    width: 180px;
+    margin-top: 5px;
+  }
+
+  .nav_bar > ul {
+    display: flex;
+    gap: 25px;
+    font-size: 1rem;
+  }
+
+  .active {
+    color: var(--primary-color-500);
+  }
+
+  .disabled {
+    color: var(--secondary-color-900);
+  }
+
+  .nav_link {
+    color: var(--secondary-color-900);
+    font-size: 1rem;
+  }
+
+  .nav_order_btn {
+    width: 170px;
+    height: 50px;
+    color: var(--white-text);
+    border-radius: var(--br-10);
+    cursor: pointer;
+    background-color: var(--primary-color-500);
+    font-size: 1rem;
+    display: grid;
+    place-items: center;
   }
 }

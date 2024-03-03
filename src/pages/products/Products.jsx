@@ -1,6 +1,6 @@
-import React from "react";
 import "./products.css";
-import BGAwrapper from "../../components/BGA/_bgaWrapper/BGAwrapper";
+import BGAwrapper from "../../components/products_fetcher/fetcher_wrapper/BGAwrapper";
+
 const Products = () => {
   return (
     <div>
