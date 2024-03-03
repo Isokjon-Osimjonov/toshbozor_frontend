@@ -75,11 +75,11 @@ const BGAwrapper = () => {
               <div className="bga_product_text_info">
                 <div className="product_text_info_wrapper">
                   <span className="pre_info">
-                    {activeNav === "b"
+                    {activeNav === "paving"
                       ? "Bruschatka:"
-                      : activeNav === "g"
+                      : activeNav === "granite"
                       ? "Granit:"
-                      : activeNav === "a"
+                      : activeNav === "agglomerate"
                       ? "Aglomerat:"
                       : ""}
                   </span>

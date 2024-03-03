@@ -48,8 +48,8 @@
   font-size: 0.75rem;
   color: var(--footer-color);
 }
-.sm_icon:nth-child(3) {
-  margin: 0px 20px;
+.sm_icon {
+  margin-right: 15px;
 }
 
 .footer_down {
