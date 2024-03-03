@@ -3,10 +3,9 @@ import footerLogo from "../../assets/logo.svg";
 import { Link, NavLink } from "react-router-dom";
 import telegramIcon from "../../assets/icons/telegram.svg";
 import instagramIcon from "../../assets/icons/instagram.svg";
-import facebookIcon from "../../assets/icons/facebook.svg";
+import facebookIcon from "../../assets/icons/Facebook.svg";
 import { scrollToTop } from "../../utils/useScrollToTop";
 const Footer = () => {
-
   return (
     <section className="footer">
       <div className="footer_up">
