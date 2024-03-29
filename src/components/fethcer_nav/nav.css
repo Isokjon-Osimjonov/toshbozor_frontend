@@ -1,0 +1,102 @@
+.bga_nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 0.375rem;
+  cursor: pointer !important;
+}
+.bga_nav ul li {
+  color: var(--primary-color-500);
+  border: 1px solid var(--primary-color-500);
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: var(--br-6);
+  width: 11.563rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer !important;
+}
+
+.bga_active {
+  background-color: var(--primary-color-500);
+}
+ul li.bga_active {
+  color: var(--white-text);
+}
+.bga_nav ul li:hover:not(.bga_active) {
+  background-color: var(--light-bg-100);
+}
+
+/* =================================MEDIA============================ */
+@media screen and (min-width: 220px) and (max-width: 480px) {
+  .bga_nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 0.375rem;
+    cursor: pointer !important;
+    margin-top: 1rem;
+  }
+  .bga_nav ul li {
+    color: var(--primary-color-500);
+    border: 1px solid var(--primary-color-500);
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: var(--br-6);
+    width: 8rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer !important;
+    overflow: hidden;
+    flex: 1;
+    text-align: center;
+    line-height: 1;
+    padding: 0px 3px;
+  }
+  .bga_active {
+    background-color: var(--primary-color-500);
+  }
+  ul li.bga_active {
+    color: var(--white-text);
+  }
+  .bga_nav ul li:hover:not(.bga_active) {
+    background-color: var(--light-bg-100);
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .bga_nav ul li {
+    color: var(--primary-color-500);
+    border: 1px solid var(--primary-color-500);
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: var(--br-6);
+    width: 9rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer !important;
+    overflow: hidden;
+    flex: 1;
+    text-align: center;
+    line-height: 1;
+  }
+  .bga_active {
+    background-color: var(--primary-color-500);
+  }
+  ul li.bga_active {
+    color: var(--white-text);
+  }
+  .bga_nav ul li:hover:not(.bga_active) {
+    background-color: var(--light-bg-100);
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+}
+
+@media screen and (min-width: 1025px) {
+}

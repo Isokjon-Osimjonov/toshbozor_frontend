@@ -1,10 +1,11 @@
+/* eslint-disable react/prop-types */
 import "./products.css";
-import BGAwrapper from "../../components/products_fetcher/fetcher_wrapper/BGAwrapper";
+import { Outlet } from "react-router-dom";
 
 const Products = () => {
   return (
     <div>
-      <BGAwrapper />
+      <Outlet></Outlet>
     </div>
   );
 };

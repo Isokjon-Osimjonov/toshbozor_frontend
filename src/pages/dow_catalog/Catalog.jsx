@@ -1,11 +1,6 @@
-import React from 'react'
-import './catalog.css'
+import "./catalog.css";
 const Catalog = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  return <div></div>;
+};
 
-export default Catalog
+export default Catalog;

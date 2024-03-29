@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import "./products.css";
 import nextIcon from "../../assets/icons/next_icon.svg";
 import { scrollToTop } from "../../utils/useScrollToTop";
+
 const Products = () => {
   return (
     <section className="producst_types_section">

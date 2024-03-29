@@ -21,8 +21,6 @@
   align-items: center;
   padding: 0px 110px;
 }
-.text_wrapper {
-}
 
 .form_text_title {
   font-size: 2.2em;
@@ -37,7 +35,9 @@
 
 .form_wrapper {
   width: 400px;
-  height: 500px;
+  min-height: 500px;
+  height: auto;
+
   background: var(--form-bg);
   border-radius: var(--br-16);
   display: flex;
@@ -51,13 +51,11 @@
   flex-direction: column;
   align-items: center;
 }
-/* .name_input,
-.phone_input,
-.message_input, */
+
 .input_field {
   display: flex;
   flex-direction: column;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 
 label {
@@ -74,17 +72,24 @@ label {
   padding: 15px 15px;
   resize: none;
   background-image: url("../../assets/bc_texture.svg");
+  color: var(--placeholder);
+
+  line-height: 20px;
+  font-size: 1.3em;
 }
 input {
   width: 340px;
   height: 50px;
   border-radius: var(--br-10);
   padding: 0px 15px;
+  line-height: 20px;
+  font-size: 1em;
   background-image: url("../../assets/bc_texture.svg");
+  color: var(--placeholder);
 }
 input::placeholder,
 textarea::placeholder {
-  font-size: 0.9em;
+  font-size: 0.9em !important;
   color: var(--placeholder);
 }
 input:focus,
@@ -95,12 +100,21 @@ input:focus,
 .form_send_btn {
   width: 340px;
   height: 50px;
-  border-radius: var(--br-16);
+  border-radius: var(--br-10);
   background-color: var(--primary-color-500);
   color: var(--white-text);
   font-size: 1.2em;
-  margin-top: 10px;
+  margin-top: 30px;
   cursor: pointer;
+  transition: background-color 0.3s linear;
+}
+.form_send_btn:hover {
+  background-color: #ca993b;
+}
+
+.error {
+  color: #ff3333;
+  font-size: 1.2em;
 }
 
 @media screen and (min-width: 200px) and (max-width: 480px) {
@@ -135,10 +149,12 @@ input:focus,
     width: 200px;
   }
   .form_text_paragraph {
-    font-size: 0.8em;
+    font-size: 0.9em;
     font-weight: 300;
+    width: 70%;
+    text-align: center;
+    margin: auto;
     margin-top: 10px;
-    width: 220px;
   }
 
   .form_wrapper {
@@ -150,7 +166,6 @@ input:focus,
     flex-direction: column;
     align-items: center;
     padding: 34px 0px;
-
   }
 
   .form_inputs_wrapper {
@@ -159,13 +174,13 @@ input:focus,
     align-items: center;
   }
 
-
   #message {
     width: 270px;
     height: 100px;
     border-radius: var(--br-8);
     padding: 15px 15px;
     resize: none;
+    font-size: 1em;
     background-image: url("../../assets/bc_texture.svg");
   }
   input {
@@ -175,7 +190,6 @@ input:focus,
     padding: 0px 15px;
     background-image: url("../../assets/bc_texture.svg");
   }
-
 
   .form_send_btn {
     width: 270px;
@@ -184,7 +198,8 @@ input:focus,
     background-color: var(--primary-color-500);
     color: var(--white-text);
     font-size: 1em;
-    margin-top: 10px;
+    margin-top: 30px;
+
     cursor: pointer;
   }
 }
@@ -193,52 +208,61 @@ input:focus,
   .contact_section {
     width: var(--width-sm);
     max-width: var(--max-width);
-
     min-height: 400px;
     height: auto;
     margin: auto;
-    margin-top: 200px;
   }
 
   .conatct_text_wrapper {
     width: 100%;
     max-width: var(--max-width);
-    background: var(--contact-form-color);
+    background: var(--contact-form-mobile-color);
     border-radius: var(--br-16);
-    height: 270px;
+    height: auto;
     margin: auto;
     margin-top: 60px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 20px;
+    padding: 0px;
+  }
+  .text_wrapper {
+    margin-top: 20px;
   }
 
   .form_text_title {
-    font-size: 1.4em;
+    font-size: 1.5em;
     width: 250px;
+    text-align: center;
   }
   .form_text_paragraph {
-    font-size: 0.9em;
+    font-size: 1em;
     font-weight: 300;
-    margin-top: 20px;
-    text-align: left;
-    width: 250px;
+    margin-top: 10px;
+    width: 260px;
+    text-align: center;
   }
 
   .form_wrapper {
-    width: 320px;
-    height: 440px;
-    background: var(--form-bg);
+    width: 100%;
+    height: 450px;
+    background: transparent;
     border-radius: var(--br-16);
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 20px;
+    padding: 34px 0px;
+  }
+
+  .form_inputs_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   #message {
-    width: 280px;
+    width: 300px;
     height: 100px;
     border-radius: var(--br-8);
     padding: 15px 15px;
@@ -246,7 +270,7 @@ input:focus,
     background-image: url("../../assets/bc_texture.svg");
   }
   input {
-    width: 280px;
+    width: 300px;
     height: 40px;
     border-radius: var(--br-8);
     padding: 0px 15px;
@@ -254,19 +278,20 @@ input:focus,
   }
 
   .form_send_btn {
-    width: 280px;
+    width: 300px;
     height: 40px;
     border-radius: var(--br-8);
     background-color: var(--primary-color-500);
     color: var(--white-text);
-    font-size: 1.2em;
-    margin-top: 10px;
+    font-size: 1em;
+    margin-top: 30px;
+
     cursor: pointer;
   }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-    .contact_section {
+  .contact_section {
     width: var(--width-md);
     max-width: var(--max-width);
 
@@ -336,13 +361,14 @@ input:focus,
     background-color: var(--primary-color-500);
     color: var(--white-text);
     font-size: 1.2em;
-    margin-top: 10px;
+    margin-top: 30px;
+
     cursor: pointer;
   }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1200px) {
-      .contact_section {
+  .contact_section {
     width: var(--width-md);
     max-width: var(--max-width);
 
@@ -412,7 +438,8 @@ input:focus,
     background-color: var(--primary-color-500);
     color: var(--white-text);
     font-size: 1.2em;
-    margin-top: 10px;
+    margin-top: 30px;
+
     cursor: pointer;
   }
 }

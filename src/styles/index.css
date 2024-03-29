@@ -18,10 +18,14 @@ html {
   display: none;
 }
 
+
 body {
   background: #f7f7f7;
   background-image: url(../assets/BC.svg);
   font-family: "Exo 2";
+}
+button {
+  cursor: pointer;
 }
 .no-scroll {
   overflow: hidden;
@@ -33,9 +37,11 @@ body {
   --active-color-500: #bd8935;
   --secondary-color-900: #5e3825;
   --icon-bg-400: #ca993b;
-  --primary-bg: rgba(255, 255, 255, 0.5);
-  --placeholder: #828282;
-  --footer-color: #a2aab0;
+  --primary-bg: rgba(255, 255, 255, 0.8);
+  /* --primary-bg: #fafafa; */
+
+  --placeholder: #959595;
+  --footer-color: #434d54;
   --black: #000000;
   --footer-text-color: #6a6a6a;
   --contact-form-color: linear-gradient(
@@ -44,7 +50,7 @@ body {
     rgba(189, 136, 45, 0.4) 47.71%,
     rgba(207, 169, 89, 0.4) 100%
   );
-  --form-bg: linear-gradient(90deg, #E1CDAA 0%, #E1CDAA 90%);
+  --form-bg: linear-gradient(90deg, #e1cdaa 0%, #e1cdaa 90%);
 
   --contact-form-mobile-color: linear-gradient(
     180deg,
@@ -106,4 +112,27 @@ body {
   --font-size-fluid-2: clamp(1.3rem, 2vw, 2rem);
 
   --font-size-fluid-3: clamp(3em, 3em, 3em);
+}
+
+.slide_in {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #0f0f0f;
+  transform-origin: bottom;
+}
+
+.slide_out {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #0f0f0f;
+  transform-origin: top;
+}
+.modal_send_btn {
+  background-color: var(--primary-color-500);
 }

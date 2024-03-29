@@ -51,6 +51,9 @@
 
 .answer {
   padding: 15px 0px;
+  line-height: 25px;
+  font-weight: 400;
+  font-size: 1em;
 }
 .collapse {
   height: 0;
@@ -65,22 +68,27 @@
   background: transparent;
   border: none;
   cursor: pointer;
-}
-.open_close_btn > img {
   width: 28px;
+  height: 28px;
+}
+
+
+.open_close_icons{
+  width: 28px;
+
 }
 
 @media screen and (min-width: 200px) and (max-width: 480px) {
-    .faq_section {
-  width: var(--width-sm);
-  max-width: var(--max-width);
-  /* background-color: var(--primary-bg); */
-  border-radius: var(--br-16);
-  min-height: 500px;
-  height: auto;
-  margin: auto;
-  margin-top: 60px;
-}
+  .faq_section {
+    width: var(--width-sm);
+    max-width: var(--max-width);
+    /* background-color: var(--primary-bg); */
+    border-radius: var(--br-16);
+    min-height: 500px;
+    height: auto;
+    margin: auto;
+    margin-top: 60px;
+  }
   .faq_title_text {
     font-size: 4vw;
     text-align: center;
@@ -105,7 +113,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: .8em;
+    font-size: 1em;
     color: var(--secondary-color-900);
     font-weight: 500;
     padding: 15px 0px;
@@ -114,33 +122,41 @@
   .answer {
     padding: 15px 0px;
   }
-  .open_close_btn > img {
-    width: 28px;
-  }
+  .open_close_btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+}
+ .open_close_icons{
+  width: 28px;
+
+}
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
-     .devider {
+  .devider {
     width: 250px;
     border: 1px solid var(--gradient-text-color);
     border-radius: 100px;
     margin: auto;
     margin-top: 10px;
   }
-    .faq_title_text {
+  .faq_title_text {
     font-size: 4vw;
     text-align: center;
   }
 }
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-         .devider {
+  .devider {
     width: 290px;
     border: 1px solid var(--gradient-text-color);
     border-radius: 100px;
     margin: auto;
     margin-top: 10px;
   }
-    .faq_title_text {
+  .faq_title_text {
     font-size: 2.8vw;
     text-align: center;
   }

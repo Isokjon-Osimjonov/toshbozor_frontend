@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./faq.css";
-
 import { FAQ_STATIC } from "../../static/FAQ_STATIC";
-import { FaqItem } from "./FaqIems";
+import { FaqItem } from "./FaqItems";
+
 const Faq = () => {
   const [openId, setOpenId] = useState(null);
 

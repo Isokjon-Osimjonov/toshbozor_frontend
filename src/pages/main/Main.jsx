@@ -5,16 +5,17 @@ import TBpros from "../../sections/toshbozor_pros/TBpros";
 import Products from "../../sections/product_types/Products";
 import Faq from "../../sections/faq/Faq";
 import Contact from "../../sections/contact/Contact";
+
 const Main = () => {
   return (
-    < div className="components_container">
-      <Hero />
+    <div className="components_container">
+      <Hero />,
       <Whytb />
       <TBpros />
       <Products />
       <Faq />
-      <Contact/>
-    </ div>
+      <Contact />
+    </div>
   );
 };
 

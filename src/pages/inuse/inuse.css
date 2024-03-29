@@ -1,0 +1,301 @@
+.examples_main {
+  max-width: var(--max-width);
+  width: var(--width-lg);
+  margin: auto;
+  margin-top: 5cqmin;
+}
+
+.inuse_main {
+  width: var(--width-lg);
+  max-width: var(--max-width);
+  height: 600px;
+  background-color: var(--primary-bg);
+  border-radius: var(--br-16);
+  background-image: url(../../assets/bc_blur.svg);
+  background-repeat: no-repeat;
+  backdrop-filter: blur(5px);
+  backdrop-filter: sepia(5%);
+  margin: auto;
+  margin-top: 0.938em;
+  padding: 0px 150px 0px 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-position: center;
+}
+.inuse_main_header {
+  font-size: 3em;
+  color: var(--secondary-color-900);
+}
+.inuse_main_header > b {
+  color: var(--primary-color-500);
+}
+.inuse_main_logo_icon {
+}
+
+.examples_img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.gird_wrapper > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: var(--br-16);
+}
+
+.examples_img {
+  width: 100%;
+  height: 100%;
+  object-fit: fit;
+  border-radius: var(--br-16);
+}
+
+.gird_wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 10px;
+  grid-auto-rows: 200px;
+  grid-auto-flow: dense;
+}
+
+.gird_wrapper .wide {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.gird_wrapper .tall {
+  grid-row: span 2;
+  grid-column: span 3;
+}
+
+.gird_wrapper .big {
+  grid-row: span 2;
+  grid-column: span 3;
+}
+
+.gird_wrapper .ultra_wide {
+  grid-row: span 3;
+  grid-column: span 5;
+}
+
+@media screen and (min-width: 200px) and (max-width: 480px) {
+  .inuse_main {
+    width: var(--width-sm);
+    min-height: 400px;
+    height: auto;
+    border-radius: var(--br-10);
+    margin: auto;
+    margin-top: 0.938em;
+    display: flex;
+    padding: 40px 0px 40px 0px;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    background-position: center;
+  }
+  .inuse_main_header {
+    font-size: 1.6em;
+    color: var(--secondary-color-900);
+    text-align: center;
+  }
+  .inuse_main_header > b {
+    color: var(--primary-color-500);
+  }
+  .inuse_main_logo_icon {
+    margin-top: 60px;
+    width: 180px;
+  }
+  .examples_main {
+    width: var(--width-sm);
+    margin: auto;
+    margin-top: 15px;
+  }
+  .examples_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--br-14);
+  }
+  .gird_wrapper .wide {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .gird_wrapper .tall {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+
+  .gird_wrapper .thin_tall {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .gird_wrapper .big {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+
+  .gird_wrapper .ultra_wide {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .inuse_main {
+    width: var(--width-sm);
+    min-height: 400px;
+    height: auto;
+    border-radius: var(--br-12);
+    margin: auto;
+    margin-top: 0.938em;
+    display: flex;
+    padding: 40px 0px 40px 0px;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    background-position: center;
+  }
+  .inuse_main_header {
+    font-size: 1.8em;
+    color: var(--secondary-color-900);
+    text-align: center;
+  }
+  .inuse_main_header > b {
+    color: var(--primary-color-500);
+  }
+  .inuse_main_logo_icon {
+    margin-top: 60px;
+    width: 250px;
+  }
+  .examples_main {
+    width: var(--width-sm);
+    margin: auto;
+    margin-top: 15px;
+  }
+  .examples_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--br-14);
+  }
+  .gird_wrapper .wide {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .gird_wrapper .tall {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+
+  .gird_wrapper .thin_tall {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .gird_wrapper .big {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+
+  .gird_wrapper .ultra_wide {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .inuse_main {
+    width: var(--width-md);
+    min-height: 580px;
+    height: auto;
+    border-radius: var(--br-14);
+    margin: auto;
+    margin-top: 0.938em;
+    display: flex;
+    padding: 0px 40px 0px 40px;
+    justify-content: space-between;
+    align-items: center;
+    background-position: center;
+  }
+  .inuse_main_header {
+    font-size: 2em;
+    color: var(--secondary-color-900);
+  }
+  .inuse_main_header > b {
+    color: var(--primary-color-500);
+  }
+  .inuse_main_logo_icon {
+    width: 200px;
+  }
+  .examples_main {
+    width: var(--width-md);
+    margin: auto;
+    margin-top: 15px;
+  }
+  .examples_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--br-14);
+  }
+  .gird_wrapper .wide {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .gird_wrapper .tall {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+
+  .gird_wrapper .thin_tall {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .gird_wrapper .big {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+
+  .gird_wrapper .ultra_wide {
+    grid-row: span 2;
+    grid-column: span 4;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .inuse_main {
+    width: var(--width-lg);
+    max-width: var(--max-width);
+    height: 600px;
+    background-color: var(--primary-bg);
+    border-radius: var(--br-14);
+    margin: auto;
+    margin-top: 0.938em;
+    padding: 0px 90px 0px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-position: center;
+  }
+  .inuse_main_header {
+    font-size: 2.7em;
+    color: var(--secondary-color-900);
+  }
+  .inuse_main_header > b {
+    color: var(--primary-color-500);
+  }
+  .inuse_main_logo_icon {
+    width: 270px;
+  }
+}

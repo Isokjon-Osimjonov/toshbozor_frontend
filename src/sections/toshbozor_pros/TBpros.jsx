@@ -2,6 +2,7 @@ import "./tbpros.css";
 import highQualityicon from "../../assets/icons/high_quality.svg";
 import guaranteIcon from "../../assets/icons/guarante.svg";
 import priceIcon from "../../assets/icons/affordable_price.svg";
+
 const TBpros = () => {
   const advantagesCard = [
     {
@@ -25,12 +26,24 @@ const TBpros = () => {
   ];
   return (
     <section className="advantages_section">
-      <h1 className="advantages_title">Bizning avzalliklarimiz</h1>
-      <div className="devider"></div>
+      <h1
+
+        className="advantages_title"
+      >
+        Bizning avzalliklarimiz
+      </h1>
+      <div
+
+        className="devider"
+      ></div>
 
       <div className="advantages_cards_wrapper">
         {advantagesCard.map((card) => (
-          <div key={card.id} className="advantages_card">
+          <div
+           
+            key={card.id}
+            className="advantages_card"
+          >
             <div className="advantages_card_img_title">
               <img className="advantages_card_img" src={card.image} alt="" />
               <h2 className="advantages_card_title">{card.title}</h2>
