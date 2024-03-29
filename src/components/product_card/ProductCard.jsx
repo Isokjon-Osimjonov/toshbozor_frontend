@@ -63,26 +63,17 @@ const ProductCard = ({ props }) => {
             {product.image &&
               product.image.length > 0 &&
               product.image[0].url && (
-                <>
-                  {!loaded && (
-                    <img
-                      src={PlaceholdeImg}
-                      className="bga_product_image"
-                      alt=""
-                    />
-                  )}
-                  <img
-                    loading="lazy"
-                    className={`bga_product_image ${loaded ? "loaded" : ""}`}
-                    src={product.image[0].url}
-                    alt={product.productname}
-                    onLoad={handleImageLoad}
-                    onError={(e) => {
-                      e.target.onerror = null;
-                      e.target.src = PlaceholdeImg;
-                    }}
-                  />
-                </>
+                <img
+                  loading="lazy"
+                  className={`bga_product_image ${loaded ? "loaded" : ""}`}
+                  src={product.image[0].url}
+                  alt={product.productname}
+                  onLoad={handleImageLoad}
+                  onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src = PlaceholdeImg;
+                  }}
+                />
               )}
           </div>
 
