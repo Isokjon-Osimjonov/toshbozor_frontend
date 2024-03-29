@@ -65,13 +65,11 @@ const ProductCard = ({ props }) => {
               product.image[0].url && (
                 <>
                   {!loaded && (
-                    <div>
-                      <img
-                        src={PlaceholdeImg}
-                        className="bga_product_image"
-                        alt=""
-                      />
-                    </div>
+                    <img
+                      src={PlaceholdeImg}
+                      className="bga_product_image"
+                      alt=""
+                    />
                   )}
                   <img
                     loading="lazy"
