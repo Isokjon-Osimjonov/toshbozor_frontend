@@ -11,7 +11,7 @@ const Catalog = lazy(() => import("./pages/dow_catalog/Catalog"));
 // const ProductInfo = lazy(() => import("./pages/product_details/ProductInfo"));
 import Loader from "./utils/loader";
 import ProductFetcher from "./components/products_fetcher/ProductsFetcher";
-import ProductInfo from "./pages/product_details/Productinfo";
+import ProductInfo from "./pages/product_details/ProductInfo";
 
 // const ProductFetcher = lazy(() => import("./components/products_fetcher/ProductsFetcher"));
 const router = createBrowserRouter([
