@@ -1,20 +1,14 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
 import "../products_fetcher/productsFetcher.css";
 import Loader from "../../utils/loader";
 import { useNavigate } from "react-router-dom";
 import { scrollToTop } from "../../utils/useScrollToTop";
 import { v4 as uuidv4 } from "uuid";
-import PlaceholdeImg from "../../assets/images/image.png";
+import ImageComponent from "../../components/ImageComponent";
+
 const ProductCard = ({ props }) => {
   const { products, status, activeProduct } = props;
   const navigate = useNavigate();
-
-  const [loaded, setLoaded] = useState(false);
-
-  const handleImageLoad = () => {
-    setLoaded(true);
-  };
 
   if (status === "loading") {
     return (
@@ -45,7 +39,12 @@ const ProductCard = ({ props }) => {
         return "";
     }
   };
-
+  const productImageStyle = {
+    width: "100%",
+    height: "100%",
+    borderRadius: "var(--br-12)",
+    objectfit: "fit",
+  };
   return (
     <>
       {products.map((product) => (
@@ -63,16 +62,15 @@ const ProductCard = ({ props }) => {
             {product.image &&
               product.image.length > 0 &&
               product.image[0].url && (
-                <img
-                  loading="lazy"
-                  className={`bga_product_image ${loaded ? "loaded" : ""}`}
-                  src={product.image[0].url}
-                  alt={product.productname}
-                  onLoad={handleImageLoad}
-                  onError={(e) => {
-                    e.target.onerror = null;
-                    e.target.src = PlaceholdeImg;
-                  }}
+                <ImageComponent
+                  style={{
+                    position: "relative",
+                    width: "100%",
+                    height: "100%",
+                }}
+                
+                  imageStyle={productImageStyle}
+                  image={product.image[0].url}
                 />
               )}
           </div>

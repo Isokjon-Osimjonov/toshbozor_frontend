@@ -8,7 +8,6 @@ import { BGA_STATIC } from "../../static/STATIC_DATA";
 import ProductCard from "../product_card/ProductCard";
 import ModalForm from "../modal/Modal";
 import { v4 as uuidv4 } from "uuid";
-import ImageComponent from "../../components/ImageComponent";
 
 const ProductFetcher = () => {
   const [activeProduct, setActiveProduct] = useState("paving");
@@ -33,14 +32,6 @@ const ProductFetcher = () => {
     setIsModalOpen(!isModalOpen);
   };
 
-  const productImageStyle = {
-    width: "500px",
-    height: "350px",
-    borderRadius: "var(--br-16)",
-    border: "1px solid var(--border-color)",
-    objectfit: "fit",
-    marginTop: "7rem",
-  };
   return (
     <div>
       <ModalForm modalIsOpen={isModalOpen} closeModal={toggleModal} />
@@ -65,17 +56,11 @@ const ProductFetcher = () => {
               {activeProductData.description}
             </p>
           </div>
-          {/* <img
-            loading="lazy"
+
+          <img
             className="bga_product_img"
             src={activeProductData.image}
             alt={activeProductData.name}
-          /> */}
-
-          <ImageComponent
-            imageStyle={productImageStyle}
-            style={{ position: "relative" }}
-            image={activeProductData.image}
           />
         </div>
       </header>

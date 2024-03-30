@@ -1,8 +1,9 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import { Blurhash } from "react-blurhash";
+import PlaceholdeImg from "../assets/images/image.png";
 
-const ImageComponent = ({ image, style, imageStyle }) => {
+const ImageComponent = ({ image, style, imageStyle, imageClassName }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
@@ -37,7 +38,18 @@ const ImageComponent = ({ image, style, imageStyle }) => {
           />
         </div>
       )}
-      {imageLoaded && <img style={imageStyle} src={image} alt="image" />}
+      {imageLoaded && (
+        <img
+          style={imageStyle}
+          className={imageClassName}
+          src={image}
+          alt="image"
+          onError={(e) => {
+            e.target.onerror = null;
+            e.target.src = PlaceholdeImg;
+          }}
+        />
+      )}
     </div>
   );
 };

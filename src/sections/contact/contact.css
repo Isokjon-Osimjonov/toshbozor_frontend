@@ -71,7 +71,9 @@ label {
   border-radius: var(--br-10);
   padding: 15px 15px;
   resize: none;
-  background-image: url("../../assets/bc_texture.svg");
+  /* background-image: url("../../assets/bc_texture.svg"); */
+  background-color: #f2eee7;
+
   color: var(--placeholder);
 
   line-height: 20px;
@@ -84,7 +86,9 @@ input {
   padding: 0px 15px;
   line-height: 20px;
   font-size: 1em;
-  background-image: url("../../assets/bc_texture.svg");
+  /* background-image: url("../../assets/bc_texture.svg"); */
+  background-color: #f2eee7;
+
   color: var(--placeholder);
 }
 input::placeholder,
@@ -181,14 +185,14 @@ input:focus,
     padding: 15px 15px;
     resize: none;
     font-size: 1em;
-    background-image: url("../../assets/bc_texture.svg");
+    background-color: #f2eee7;
   }
   input {
     width: 270px;
     height: 40px;
     border-radius: var(--br-8);
     padding: 0px 15px;
-    background-image: url("../../assets/bc_texture.svg");
+    background-color: #f2eee7;
   }
 
   .form_send_btn {
@@ -199,7 +203,6 @@ input:focus,
     color: var(--white-text);
     font-size: 1em;
     margin-top: 30px;
-
     cursor: pointer;
   }
 }
@@ -212,7 +215,6 @@ input:focus,
     height: auto;
     margin: auto;
   }
-
   .conatct_text_wrapper {
     width: 100%;
     max-width: var(--max-width);
@@ -267,14 +269,14 @@ input:focus,
     border-radius: var(--br-8);
     padding: 15px 15px;
     resize: none;
-    background-image: url("../../assets/bc_texture.svg");
+    background-color: #f2eee7;
   }
   input {
     width: 300px;
     height: 40px;
     border-radius: var(--br-8);
     padding: 0px 15px;
-    background-image: url("../../assets/bc_texture.svg");
+    background-color: #f2eee7;
   }
 
   .form_send_btn {
@@ -344,14 +346,14 @@ input:focus,
     border-radius: var(--br-8);
     padding: 15px 15px;
     resize: none;
-    background-image: url("../../assets/bc_texture.svg");
+    background-color: #f2eee7;
   }
   input {
     width: 280px;
     height: 40px;
     border-radius: var(--br-8);
     padding: 0px 15px;
-    background-image: url("../../assets/bc_texture.svg");
+    background-color: #f2eee7;
   }
 
   .form_send_btn {
@@ -421,14 +423,14 @@ input:focus,
     border-radius: var(--br-8);
     padding: 15px 15px;
     resize: none;
-    background-image: url("../../assets/bc_texture.svg");
+    background-color: #f2eee7;
   }
   input {
     width: 280px;
     height: 40px;
     border-radius: var(--br-8);
     padding: 0px 15px;
-    background-image: url("../../assets/bc_texture.svg");
+    background-color: #f2eee7;
   }
 
   .form_send_btn {

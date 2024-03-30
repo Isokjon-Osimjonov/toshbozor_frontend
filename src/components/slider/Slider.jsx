@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
@@ -10,7 +10,7 @@ import "swiper/css/autoplay";
 import "swiper/css/keyboard";
 import { EffectCards } from "swiper/modules";
 import PlaceholdeImg from "../../assets/images/image.png";
-
+import ImageComponent from "../ImageComponent";
 const Slider = ({ images }) => {
   return images && images.length !== 0 ? (
     <Swiper
@@ -20,12 +20,21 @@ const Slider = ({ images }) => {
       autoplay={true}
       effect={"cards"}
       grabCursor={true}
-      modules={[EffectCards, Navigation, Pagination]}
-      className="mySwiper"
+      modules={[EffectCards, Navigation, Pagination, Autoplay]}
+      className="swiper"
     >
       {images?.map((image, index) => (
-        <SwiperSlide key={index}>
-          <img loading="lazy" className="slider_image" src={image.url} alt="" />
+        <SwiperSlide className="swiper_slide" key={index}>
+          <ImageComponent
+            style={{
+              borderRadius: "var(--br-16)",
+              position: "relative",
+              width: "100%",
+              height: "100%",
+            }}
+            imageClassName={"slider_image"}
+            image={image.url}
+          />
         </SwiperSlide>
       ))}
     </Swiper>

@@ -42,12 +42,7 @@ const Inuse = () => {
           {images.map((image, index) => (
             <div className="wide" key={index}>
               <ImageComponent
-                imageStyle={{
-                  width: " 100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  borderRadius: "var(--br-16)",
-                }}
+                imageClassName={"examples_img"}
                 style={imageStyle}
                 image={image}
                 key={index}
