@@ -9,6 +9,7 @@ import B_MENU from "../../assets/icons/menu_burger.svg";
 import CLOSE_ICON from "../../assets/icons/close_icon.svg";
 import WHITE_LOGO from "../../assets/logo.svg";
 import { scrollToTop } from "../../utils/useScrollToTop";
+
 const Navbar = ({ openModal }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -115,6 +116,7 @@ const Navbar = ({ openModal }) => {
                     }
                     to={item.path}
                     key={item.id}
+                    onClick={toggleMenu}
                   >
                     {item.name}
                   </NavLink>

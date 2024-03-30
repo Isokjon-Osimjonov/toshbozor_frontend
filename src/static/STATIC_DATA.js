@@ -1,6 +1,6 @@
 import pavingIemg from "../assets/images/paving.png";
 import granoitIemg from "../assets/images/granit.png";
-import agglomerateImg from "../assets/images/agglomerate.png";
+import agglomerateImg from "../assets/images/agglomerate.jpg";
 export const BGA_STATIC = [
   {
     id: "paving",
