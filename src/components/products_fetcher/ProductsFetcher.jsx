@@ -20,13 +20,13 @@ const ProductFetcher = () => {
   );
 
   //modifying the name of the product
-  let modifiedName = activeProductData.name;
-  if (activeProduct === "paving") {
-    const nameParts = activeProductData.name.split(" ");
-    const and = <span className="and"> va </span>;
+  // let modifiedName = activeProductData.name;
+  // if (activeProduct === "paving") {
+  //   const nameParts = activeProductData.name.split(" ");
+  //   const and = <span className="and"> va </span>;
 
-    modifiedName = [nameParts[0], and, nameParts[1]];
-  }
+  //   modifiedName = [nameParts[0], and, nameParts[1]];
+  // }
   const [isModalOpen, setIsModalOpen] = useState(false);
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
@@ -48,7 +48,7 @@ const ProductFetcher = () => {
               </span>
               <br />
               <span key={uuidv4()} className="product_name">
-                {modifiedName}
+                {activeProductData.name}
               </span>
             </div>
 
@@ -71,17 +71,18 @@ const ProductFetcher = () => {
           <ProductCard props={{ products, error, status, activeProduct }} />
         </div>
 
-        {activeProduct !== "paving" && (
           <div className="offer">
             <h3 className="offer_text">
-              Biz sizning talablaringiz va hohishingizga o&apos;lchamingizga
-              to&apos;liq javob beradigan mahsulotlarni ishlab chiqaramiz.
+              Biz sizning
+              <strong>
+                <i>talablaringiz hohishingiz va o&apos;lchamingizga </i>
+              </strong>
+              to&apos;liq javob beraoladigan mahsulotlarni ishlab chiqaramiz.
             </h3>
             <button onClick={toggleModal} className="offer_order_btn">
               Buyurtma berish
             </button>
           </div>
-        )}
       </section>
     </div>
   );

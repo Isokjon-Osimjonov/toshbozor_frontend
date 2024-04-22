@@ -15,7 +15,7 @@
 .product_type_1 {
   width: 30%;
   height: 350px;
-  background-image: url("../../assets/images/paving.svg");
+  background-image: url("../../assets/examples/3.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -26,7 +26,7 @@
   width: 30%;
 
   height: 350px;
-  background-image: url("../../assets/images/granite.svg");
+  background-image: url("../../assets/images/agglomerate2.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -36,7 +36,7 @@
 .product_type_3 {
   width: 30%;
   height: 350px;
-  background-image: url("../../assets/images/hero_img_marble.svg");
+  background-image: url("../../assets/images/Granite-rock-min.jpeg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

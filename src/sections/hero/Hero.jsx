@@ -1,6 +1,6 @@
 import "./hero.css";
-import PavingImg from "../../assets/images/hero_img_paving.svg";
-import MarbleImg from "../../assets/images/hero_img_marble.svg";
+import PavingImg from "../../assets/images/hero_img_paving.png";
+import MarbleImg from "../../assets/images/hero_img_marble.png";
 import { scrollToTop } from "../../utils/useScrollToTop";
 import { useNavigate } from "react-router-dom";
 

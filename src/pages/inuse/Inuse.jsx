@@ -2,11 +2,12 @@ import "./inuse.css";
 import image1 from "../../assets/examples/1.jpg";
 import image2 from "../../assets/examples/2.jpg";
 import image3 from "../../assets/examples/3.png";
-import image4 from "../../assets/examples/4.png";
 import image5 from "../../assets/examples/5.png";
 import image6 from "../../assets/examples/6.jpg";
 import image7 from "../../assets/examples/7.png";
 import image8 from "../../assets/examples/8.jpg";
+import image9 from "../../assets/examples/inuse_img.jpg";
+import image10 from "../../assets/examples/inuse_img2.jpg";
 import LOGO_ICON from "../../assets/images/logo_icon.svg";
 import ImageComponent from "../../components/ImageComponent";
 
@@ -16,11 +17,12 @@ const Inuse = () => {
     image1,
     image2,
     image3,
-    image4,
     image5,
     image6,
     image7,
     image8,
+    image9,
+    image10,
   ];
 
   return (

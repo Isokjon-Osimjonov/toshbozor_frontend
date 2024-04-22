@@ -13,7 +13,7 @@ const Products = () => {
           to="/products"
         >
           <h3>
-            Bruschatka <br /> Bordyur
+            Bruschatka
           </h3>
           <img src={nextIcon} alt="" />
         </NavLink>

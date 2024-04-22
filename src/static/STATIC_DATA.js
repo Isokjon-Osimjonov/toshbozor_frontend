@@ -1,10 +1,10 @@
-import pavingIemg from "../assets/images/paving.png";
-import granoitIemg from "../assets/images/granit.png";
-import agglomerateImg from "../assets/images/agglomerate.jpg";
+import pavingIemg from "../assets/examples/3.png";
+import granoitIemg from "../assets/images/Granite-rock-min.jpeg";
+import agglomerateImg from "../assets/images/agglomerate2.jpg";
 export const BGA_STATIC = [
   {
     id: "paving",
-    name: "Bruschatka Bordyur",
+    name: "Bruschatka",
     description:
       "Bizning beton qoplamalarimiz nafaqat sizning biznesingiz yoki uyingiz muhitiga juda mos keladi, balki sizning makoningiz uchun bardoshli va zamonaviy yechim ham beradi. Biz turli o'lchamlar, shakllar va ranglarni taklif qilamiz, shunda siz o'zingizning didingiz va shaxsiyatingizni aks ettiruvchi mukammal dizaynni yaratishingiz mumkin. Bizga ishoning va biz sizning makoningizni noyob qilamiz!",
     image: pavingIemg,

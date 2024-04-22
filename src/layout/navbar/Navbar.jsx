@@ -55,78 +55,79 @@ const Navbar = ({ openModal }) => {
   ];
 
   return (
-    <nav
-      className={scrolled ? "nav_bar scrolled" : "nav_bar"}
-      // className="nav_bar"
-    >
-      <NavLink onClick={scrollToTop} to={"/"}>
-        <img className="nav_logo" src={Logo} alt="LLC Logo" />
-      </NavLink>
+    <>
+      <nav
+        className={scrolled ? "nav_bar scrolled" : "nav_bar"}
+        // className="nav_bar"
+      >
+        <NavLink onClick={scrollToTop} to={"/"}>
+          <img className="nav_logo" src={Logo} alt="LLC Logo" />
+        </NavLink>
 
-      <ul>
-        {NAV_TABS?.map((item) => (
-          <NavLink
-            onClick={scrollToTop}
-            className={({ isActive }) => (isActive ? "active" : "disabled")}
-            to={item.path}
-            key={item.id}
-          >
-            {item.name}
-          </NavLink>
-        ))}
-      </ul>
+        <ul>
+          {NAV_TABS?.map((item) => (
+            <NavLink
+              onClick={scrollToTop}
+              className={({ isActive }) => (isActive ? "active" : "disabled")}
+              to={item.path}
+              key={item.id}
+            >
+              {item.name}
+            </NavLink>
+          ))}
+        </ul>
 
-      <button onClick={openModal} className="nav_order_btn ">
-        Buyurtma berish
-      </button>
-
-      <div className="order_btn_burger_menu">
-        <button onClick={openModal} className="nav_order_btn_mobile">
-          <img src={PHONE_ICON} alt="" />
+        <button onClick={openModal} className="nav_order_btn ">
+          Buyurtma berish
         </button>
 
-        <img
-          onClick={toggleMenu}
-          className="burger_menu_btn"
-          src={B_MENU}
-          alt=""
-        />
+        <div className="order_btn_burger_menu">
+          <button onClick={openModal} className="nav_order_btn_mobile">
+            <img src={PHONE_ICON} alt="" />
+          </button>
 
-        {isOpen && (
-          <div className="overlay">
-            <div className="burger_menu">
-              <img
-                className="menu_close_btn"
-                onClick={toggleMenu}
-                src={CLOSE_ICON}
-                alt=""
-              />
-              <div className="menu_logo_div">
-                <NavLink to={"/"}>
-                  <img className="menu_logo" src={WHITE_LOGO} alt="" />
-                </NavLink>
-              </div>
-              <ul className="menu_tabs">
-                {NAV_TABS?.map((item) => (
-                  <NavLink
-                    className={({ isActive }) =>
-                      isActive
-                        ? "active sidebar_links_active "
-                        : "disabled sidebar_links_disabled"
-                    }
-                    to={item.path}
-                    key={item.id}
-                    onClick={toggleMenu}
-                  >
-                    {item.name}
-                  </NavLink>
-                ))}
-              </ul>
+          <img
+            onClick={toggleMenu}
+            className="burger_menu_btn"
+            src={B_MENU}
+            alt=""
+          />
+        </div>
+      </nav>
+      {isOpen && (
+        <div className="overlay">
+          <div className="burger_menu">
+            <img
+              className="menu_close_btn"
+              onClick={toggleMenu}
+              src={CLOSE_ICON}
+              alt=""
+            />
+            <div className="menu_logo_div">
+              <NavLink to={"/"}>
+                <img className="menu_logo" src={WHITE_LOGO} alt="" />
+              </NavLink>
             </div>
+            <ul className="menu_tabs">
+              {NAV_TABS?.map((item) => (
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive
+                      ? "active sidebar_links_active "
+                      : "disabled sidebar_links_disabled"
+                  }
+                  to={item.path}
+                  key={item.id}
+                  onClick={toggleMenu}
+                >
+                  {item.name}
+                </NavLink>
+              ))}
+            </ul>
           </div>
-        )}
-      </div>
-    </nav>
+        </div>
+      )}
+    </>
   );
 };
 
