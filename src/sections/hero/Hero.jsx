@@ -1,6 +1,6 @@
 import "./hero.css";
-import PavingImg from "../../assets/images/hero_img_paving.png";
-import MarbleImg from "../../assets/images/hero_img_marble.png";
+import PavingImg from "../../assets/examples/3.png";
+import MarbleImg from "../../assets/images/agglomerate2.jpg";
 import { scrollToTop } from "../../utils/useScrollToTop";
 import { useNavigate } from "react-router-dom";
 
@@ -13,7 +13,8 @@ const Hero = () => {
         <div className="left_side">
           <p>Sizga kerakli mahsulot albatta bor!</p>
           <h1>
-            <b>TOSHBOZOR</b> bilan mukammal tashqi ko’rinishni kashf eting
+            <b>TOSHBOZOR</b> bilan mukammal tashqi ko’rinishni kashf
+            eting
           </h1>
           <button
             onClick={() => {

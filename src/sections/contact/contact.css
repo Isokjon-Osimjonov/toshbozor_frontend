@@ -37,7 +37,6 @@
   width: 400px;
   min-height: 500px;
   height: auto;
-
   background: var(--form-bg);
   border-radius: var(--br-16);
   display: flex;
@@ -71,11 +70,8 @@ label {
   border-radius: var(--br-10);
   padding: 15px 15px;
   resize: none;
-  /* background-image: url("../../assets/bc_texture.svg"); */
   background-color: #f2eee7;
-
   color: var(--placeholder);
-
   line-height: 20px;
   font-size: 1.3em;
 }
@@ -86,18 +82,16 @@ input {
   padding: 0px 15px;
   line-height: 20px;
   font-size: 1em;
-  /* background-image: url("../../assets/bc_texture.svg"); */
   background-color: #f2eee7;
+  color: var(--placeholder);
+}
 
+.input_field::placeholder {
+  font-size: 0.8em !important;
   color: var(--placeholder);
 }
-input::placeholder,
-textarea::placeholder {
-  font-size: 0.9em !important;
-  color: var(--placeholder);
-}
-input:focus,
-#message:focus {
+
+.input_field:focus {
   box-shadow: var(--input_shadow);
 }
 

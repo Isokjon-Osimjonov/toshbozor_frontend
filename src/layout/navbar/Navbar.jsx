@@ -50,7 +50,7 @@ const Navbar = ({ openModal }) => {
   const NAV_TABS = [
     { id: 0, name: "Asosiy", path: "/" },
     { id: 1, name: "Mahsulotlar", path: "/products" },
-    { id: 2, name: "Ish namunalari", path: "/examples" },
+    { id: 2, name: "Ish n'amunalari", path: "/examples" },
     // { id: 3, name: "Katalog yuklash", path: "/catalog" },
   ];
 

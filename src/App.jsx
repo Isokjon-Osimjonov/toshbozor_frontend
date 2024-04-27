@@ -8,56 +8,66 @@ const Main = lazy(() => import("./pages/main/Main"));
 const Products = lazy(() => import("./pages/products/Products"));
 const Inuse = lazy(() => import("./pages/inuse/Inuse"));
 const Catalog = lazy(() => import("./pages/dow_catalog/Catalog"));
-// const ProductInfo = lazy(() => import("./pages/product_details/ProductInfo"));
-import Loader from "./utils/loader";
-import ProductFetcher from "./components/products_fetcher/ProductsFetcher";
+import Loader from "./components/ui/loader";
 import ProductInfo from "./pages/product_details/ProductInfo";
+import ErrorBoundary from "./utils/errorBoundary";
 
-// const ProductFetcher = lazy(() => import("./components/products_fetcher/ProductsFetcher"));
 const router = createBrowserRouter([
   {
     element: (
-      <Suspense fallback={<Loader />}>
-        <AppLayuot />
-      </Suspense>
+      <ErrorBoundary>
+        <Suspense fallback={<Loader />}>
+          <AppLayuot />
+        </Suspense>
+      </ErrorBoundary>
     ),
     children: [
       {
         path: "/",
-        element: <Main />,
+        element: (
+          <ErrorBoundary>
+            <Main />,
+          </ErrorBoundary>
+        ),
       },
       {
         path: "/products",
         element: (
-          <Suspense fallback={<Loader />}>
-            <Products />
-          </Suspense>
+          <ErrorBoundary>
+            <Suspense fallback={<Loader />}>
+              <Products />
+            </Suspense>
+          </ErrorBoundary>
         ),
-        children: [
-          {
-            path: "",
-            element: <ProductFetcher />,
-          },
-          {
-            path: ":productId",
-            element: <ProductInfo />,
-          },
-        ],
+      },
+      {
+        path: "/products/:productId",
+        element: (
+          <ErrorBoundary>
+            <Suspense fallback={<Loader />}>
+              <ProductInfo />
+            </Suspense>
+          </ErrorBoundary>
+        ),
       },
       {
         path: "/examples",
         element: (
-          <Suspense fallback={<Loader />}>
-            <Inuse />
-          </Suspense>
+          <ErrorBoundary>
+            <Suspense fallback={<Loader />}>
+              <Inuse />
+            </Suspense>
+          </ErrorBoundary>
         ),
       },
       {
         path: "/catalog",
         element: (
-          <Suspense fallback={<Loader />}>
-            <Catalog />
-          </Suspense>
+          <ErrorBoundary>
+            <Suspense fallback={<Loader />}>
+              <Catalog />
+            </Suspense>
+          </ErrorBoundary>
         ),
       },
     ],

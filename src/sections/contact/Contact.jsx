@@ -26,14 +26,15 @@ const Contact = () => {
       <div className="conatct_text_wrapper">
         <div className="text_wrapper">
           <h1 className="form_text_title">
-            <b>TOSHBOZOR</b> bilan tog’ri tanlov qiling !
+            <b>&quot;TOSHBOZOR&quot;</b> bilan tog’ri tanlov qiling !
           </h1>
           <p className="form_text_paragraph">
-            Ma’lumotlaringizni qoldiring va sizga tez fursatda aloqaga chiqamiz
+            Ma’lumotlaringizni qoldiring va sizga tez fursatda a&apos;loqaga
+            chiqamiz.
           </p>
         </div>
 
-        <ContactForm  onSubmit={handleSubmit} />
+        <ContactForm onSubmit={handleSubmit} />
       </div>
     </section>
   );

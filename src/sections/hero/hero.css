@@ -79,12 +79,15 @@ h1 {
     margin-right: 20px;
     filter: drop-shadow(20px 20px 5px rgba(227, 209, 160, 0.3));
     border-radius: var(--br-10);
+    object-fit: cover;
   }
   .hero_marble_img {
     height: 200px;
     width: 200px;
     border-radius: var(--br-10);
     margin-top: 80px;
+    object-fit: cover;
+
   }
 
 /* =================================MEDIA============================ */

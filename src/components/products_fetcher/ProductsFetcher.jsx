@@ -1,6 +1,6 @@
-/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import "./productsFetcher.css";
 import Nav from "../fethcer_nav/FetcherNavigation";
 import ProductsFetcher from "../../hooks/product-fetcher";
@@ -10,36 +10,27 @@ import ModalForm from "../modal/Modal";
 import { v4 as uuidv4 } from "uuid";
 
 const ProductFetcher = () => {
-  const [activeProduct, setActiveProduct] = useState("paving");
+  const { productType } = useParams();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  //Fetches the data from the API
   const { products, error, status } = ProductsFetcher({
-    endpoint: `/product/${activeProduct}`,
+    endpoint: `/product/${productType}`,
   });
 
-  const activeProductData = BGA_STATIC.find(
-    (item) => item.id === activeProduct
-  );
+  const activeProductData = BGA_STATIC.find((item) => item.id === productType);
 
-  //modifying the name of the product
-  // let modifiedName = activeProductData.name;
-  // if (activeProduct === "paving") {
-  //   const nameParts = activeProductData.name.split(" ");
-  //   const and = <span className="and"> va </span>;
-
-  //   modifiedName = [nameParts[0], and, nameParts[1]];
-  // }
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
   };
+
+  // useEffect(() => {}, [productType]);
 
   return (
     <div>
       <ModalForm modalIsOpen={isModalOpen} closeModal={toggleModal} />
       <header className="bga_header">
-        <Nav
-          activeProduct={activeProduct}
-          setActiveProduct={setActiveProduct}
-        />
+        <Nav activeProduct={productType} setActiveProduct={() => {}} />
         <div className="bga_header_data_wrapper">
           <div className="bga_textinfo_wrapper">
             <div className="bag_product_title_div">
@@ -68,21 +59,21 @@ const ProductFetcher = () => {
       <section className="bga_products_wrapper">
         <h2 className="bga_title">{activeProductData.name}</h2>
         <div className="bga_products">
-          <ProductCard props={{ products, error, status, activeProduct }} />
+          <ProductCard products={products} error={error} status={status} />
         </div>
 
-          <div className="offer">
-            <h3 className="offer_text">
-              Biz sizning
-              <strong>
-                <i>talablaringiz hohishingiz va o&apos;lchamingizga </i>
-              </strong>
-              to&apos;liq javob beraoladigan mahsulotlarni ishlab chiqaramiz.
-            </h3>
-            <button onClick={toggleModal} className="offer_order_btn">
-              Buyurtma berish
-            </button>
-          </div>
+        <div className="offer">
+          <h3 className="offer_text">
+            Biz sizning
+            <strong>
+              <i> talablaringiz hohishingiz va o&apos;lchamingizga </i>
+            </strong>
+            to&apos;liq javob beraoladigan mahsulotlarni ishlab chiqaramiz.
+          </h3>
+          <button onClick={toggleModal} className="offer_order_btn">
+            Buyurtma berish
+          </button>
+        </div>
       </section>
     </div>
   );

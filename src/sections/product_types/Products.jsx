@@ -12,9 +12,7 @@ const Products = () => {
           className="product_type_link"
           to="/products"
         >
-          <h3>
-            Bruschatka
-          </h3>
+          <h3>Yulka toshlari</h3>
           <img src={nextIcon} alt="" />
         </NavLink>
       </div>

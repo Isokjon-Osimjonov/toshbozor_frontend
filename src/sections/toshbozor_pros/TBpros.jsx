@@ -9,7 +9,7 @@ const TBpros = () => {
       id: 1,
       image: highQualityicon,
       title: "Yuqori sifatli mahsulot",
-      text: "Bizning sinchkovlik bilan tanlangan tanlovimiz har bir toshning abadiy nafisligi va ajoyib ishlashini aks ettiradi, har qanday tashqi makonni uslub va funksionallik makoniga aylantiradi.",
+      text: "Bizning sinchkovlik bilan tanlangan tanlovimiz har bir toshning uzoq muddatga nafisligi va ajoyib ishlashini aks ettiradi, har qanday tashqi makonni uslub va funksionallik makoniga aylantiradi.",
     },
     {
       id: 2,
@@ -21,29 +21,17 @@ const TBpros = () => {
       id: 3,
       image: priceIcon,
       title: "Hamyonbop narxlar",
-      text: "Biz sifatga putur etkazmagan holda arzonlikni birinchi o'ringa qo'yamiz. Bizning arzon narxlardagi keng tanlovimiz yuqori sifatli yulka toshlarini har bir byudjet uchun mos.",
+      text: "Biz sifatga putur etkazmagan holda, arzonlikni birinchi o'ringa qo'yamiz. Bizning arzon narxlardagi keng tanlovimiz yuqori sifatli yulka toshlarini har bir byudjet uchun mos.",
     },
   ];
   return (
     <section className="advantages_section">
-      <h1
-
-        className="advantages_title"
-      >
-        Bizning avzalliklarimiz
-      </h1>
-      <div
-
-        className="devider"
-      ></div>
+      <h1 className="advantages_title">Bizning afzalliklarimiz</h1>
+      <div className="devider"></div>
 
       <div className="advantages_cards_wrapper">
         {advantagesCard.map((card) => (
-          <div
-           
-            key={card.id}
-            className="advantages_card"
-          >
+          <div key={card.id} className="advantages_card">
             <div className="advantages_card_img_title">
               <img className="advantages_card_img" src={card.image} alt="" />
               <h2 className="advantages_card_title">{card.title}</h2>

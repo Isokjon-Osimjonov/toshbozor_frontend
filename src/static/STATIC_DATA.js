@@ -4,9 +4,9 @@ import agglomerateImg from "../assets/images/agglomerate2.jpg";
 export const BGA_STATIC = [
   {
     id: "paving",
-    name: "Bruschatka",
+    name: "Yulka toshlar",
     description:
-      "Bizning beton qoplamalarimiz nafaqat sizning biznesingiz yoki uyingiz muhitiga juda mos keladi, balki sizning makoningiz uchun bardoshli va zamonaviy yechim ham beradi. Biz turli o'lchamlar, shakllar va ranglarni taklif qilamiz, shunda siz o'zingizning didingiz va shaxsiyatingizni aks ettiruvchi mukammal dizaynni yaratishingiz mumkin. Bizga ishoning va biz sizning makoningizni noyob qilamiz!",
+      "Bizning yulka toshlarimiz nafaqat sizning biznesingiz yoki uyingiz muhitiga juda mos keladi, balki sizning makoningiz uchun bardoshli va zamonaviy yechim ham bo'laoladi. Biz turli o'lchamlar, shakllar va ranglarni taklif qilamiz, shunda siz o'zingizning didingiz va shaxsiyatingizni aks ettiruvchi mukammal dizaynni yaratishingiz mumkin. Bizga ishoning va biz sizning makoningizni noyob qilamiz!",
     image: pavingIemg,
   },
   {

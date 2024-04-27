@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useRef, useState } from "react";
 import "./contact.css";
-import { Input, TextAreaInput } from "../../utils/input";
+import { Input, TextAreaInput } from "../../components/ui/input";
 import { formatInputValue } from "../../utils/format-phone";
 import { toast } from "sonner";
 
@@ -97,9 +97,9 @@ const ContactForm = ({ onSubmit }) => {
 
         <TextAreaInput
           className="input_field"
-          label="Habaringiz"
+          label="Xabaringiz"
           name="message"
-          placeholder="Habaringizni yozing"
+          placeholder="Xabaringizni yozing"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           style={error ? { boxShadow: "0px 0px 1px 1px #ff6464" } : {}}

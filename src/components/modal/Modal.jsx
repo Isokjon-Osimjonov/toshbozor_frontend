@@ -4,7 +4,7 @@ import Logo from "../../assets/logo.svg";
 
 import { useEffect, useRef, useState } from "react";
 import "./modal.css";
-import { Input } from "../../utils/input";
+import { Input } from "../ui/input";
 import { formatInputValue } from "../../utils/format-phone";
 import { toast } from "sonner";
 import { sendEmail } from "../../utils/email";

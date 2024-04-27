@@ -13,8 +13,7 @@ const Whytb = () => {
             Nima uchun aynan <b>TOSHBOZOR !</b>
           </h1>
           <p className="text_paragraph">
-            Bizningning kompaniyadan mashsulotlarnin tez sifatli va qulay <br />
-            narhlarda harid qiling!
+            Mahsulotlarni tez, sifatli va qulay narxlarda xarid qiling !
           </p>
         </div>
 
@@ -25,7 +24,7 @@ const Whytb = () => {
           }}
           className="see_catalog_btn"
         >
-          Ish namunalari
+          Ish n&apos;amunalari
         </button>
       </div>
       <img className="toshbozor_logo_img" src={LOGO_BC} alt="" />

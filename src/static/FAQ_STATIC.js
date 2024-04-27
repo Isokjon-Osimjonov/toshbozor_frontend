@@ -20,7 +20,7 @@ export const FAQ_STATIC = [
   {
     id: 3,
     question:
-      "Yo'l qoplamali toshlarni tozalash osonmi va qancha vaqt xizmat qiladi",
+      "Yo'l qoplamali toshlarni tozalash osonmi va qancha vaqt xizmat qiladi?",
     answer:
       "Ha, yulka toshlarini saqlash nisbatan oson. Suv va yumshoq detarjen bilan muntazam tozalash ularning eng yaxshi ko'rinishini saqlashga yordam beradi. Bundan tashqari, plitkalarni muhrlab qo'yish ularni dog'lardan, xiralashishdan va ob-havo ta'siridan himoya qilishga yordam beradi.",
   },

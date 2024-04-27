@@ -1,14 +1,15 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import "../products_fetcher/productsFetcher.css";
-import Loader from "../../utils/loader";
-import { useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
+import Loader from "../ui/loader";
 import { scrollToTop } from "../../utils/useScrollToTop";
 import { v4 as uuidv4 } from "uuid";
 import ImageComponent from "../../components/ImageComponent";
 
-const ProductCard = ({ props }) => {
-  const { products, status, activeProduct } = props;
+const ProductCard = ({ products, error, status }) => {
   const navigate = useNavigate();
+  const { productType, productId } = useParams();
 
   if (status === "loading") {
     return (
@@ -26,9 +27,8 @@ const ProductCard = ({ props }) => {
     );
   }
 
-  const activeProductPrefix = activeProduct;
-  const getCategoryPrefix = (activeProductPrefix) => {
-    switch (activeProductPrefix) {
+  const getCategoryPrefix = (type) => {
+    switch (type) {
       case "paving":
         return "Bruschatka:";
       case "marble":
@@ -43,16 +43,15 @@ const ProductCard = ({ props }) => {
     width: "100%",
     height: "100%",
     borderRadius: "var(--br-12)",
-    objectfit: "fit",
+    objectFit: "fit",
   };
   return (
     <>
       {products.map((product) => (
         <div
           onClick={() => {
-            navigate(`/products/${product.productname}`, {
-              state: { product },
-            });
+            const path = `/products/${product.productname}`;
+            navigate(path, { state: { product } });
             scrollToTop();
           }}
           key={product._id}
@@ -67,8 +66,7 @@ const ProductCard = ({ props }) => {
                     position: "relative",
                     width: "100%",
                     height: "100%",
-                }}
-                
+                  }}
                   imageStyle={productImageStyle}
                   image={product.image[0].url}
                 />
@@ -81,7 +79,7 @@ const ProductCard = ({ props }) => {
                 <span className="pre_info">Bordyur:</span>
               ) : (
                 <span className="pre_info">
-                  {getCategoryPrefix(activeProductPrefix)}
+                  {getCategoryPrefix(productType)}
                 </span>
               )}
 
@@ -100,7 +98,7 @@ const ProductCard = ({ props }) => {
               <h2 className="bag_product_price">
                 {product.price}
                 <span className="uzs">
-                  {activeProductPrefix !== "paving" ? " $" : " UZS"}
+                  {productType !== "paving" ? " $" : " UZS"}
                 </span>
               </h2>
             </div>

@@ -26,7 +26,7 @@ const Footer = () => {
                 to="/products"
                 className="footer_link"
               >
-                Bruschatka <br /> Bordyur
+               Yulka toshlari
               </NavLink>
               <NavLink
                 onClick={scrollToTop}
