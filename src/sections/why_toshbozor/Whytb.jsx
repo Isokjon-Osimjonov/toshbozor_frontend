@@ -10,10 +10,10 @@ const Whytb = () => {
       <div className="toshbozor_text">
         <div>
           <h1 className="text_title">
-            Nima uchun aynan <b>TOSHBOZOR !</b>
+            Nima uchun aynan <b>TOSHBOZOR!</b>
           </h1>
           <p className="text_paragraph">
-            Mahsulotlarni tez, sifatli va qulay narxlarda xarid qiling !
+            Mahsulotlarni tez, sifatli va qulay narxlarda xarid qiling!
           </p>
         </div>
 
@@ -24,7 +24,7 @@ const Whytb = () => {
           }}
           className="see_catalog_btn"
         >
-          Ish n&apos;amunalari
+          Ish na&apos;munalari
         </button>
       </div>
       <img className="toshbozor_logo_img" src={LOGO_BC} alt="" />

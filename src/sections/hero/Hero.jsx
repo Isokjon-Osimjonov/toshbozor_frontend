@@ -11,10 +11,9 @@ const Hero = () => {
     <section className="hero_section">
       <div className="wrapper">
         <div className="left_side">
-          <p>Sizga kerakli mahsulot albatta bor!</p>
+          <p>Siz istagan mahsulotlar!</p>
           <h1>
-            <b>TOSHBOZOR</b> bilan mukammal tashqi ko’rinishni kashf
-            eting
+            <b>TOSHBOZOR</b> bilan <br /> yanada ko&apos;rkamroq!
           </h1>
           <button
             onClick={() => {

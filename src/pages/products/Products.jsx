@@ -69,11 +69,8 @@ const Products = () => {
 
         <div className="offer">
           <h3 className="offer_text">
-            Biz sizning
-            <strong>
-              <i> talablaringiz hohishingiz va o&apos;lchamingizga </i>
-            </strong>
-            to&apos;liq javob beraoladigan mahsulotlarni ishlab chiqaramiz.
+            Biz sizning <i>buyurtmalaringiz</i> asosida mahsulatlarni tayyorlab
+            beramiz!
           </h3>
           <button onClick={toggleModal} className="offer_order_btn">
             Buyurtma berish

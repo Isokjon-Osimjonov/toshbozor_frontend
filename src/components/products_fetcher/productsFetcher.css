@@ -159,9 +159,10 @@
 .offer_text {
   font-size: 1.5em;
   font-weight: 400;
-  /* width: ; */
-  flex: 0.7;
+  /* width:10% ; */
+  /* flex: 0.3; */
   color: var(--secondary-color-900);
+
 }
 
 .offer_order_btn {
@@ -789,7 +790,7 @@
     font-size: 1.5em;
     font-weight: 400;
     /* width: ; */
-    flex: 0.9;
+    flex: 0.7;
     color: var(--secondary-color-900);
   }
 
@@ -811,7 +812,8 @@
   .offer_text {
     font-size: 1.5em;
     font-weight: 400;
-    flex: 0.7;
+    /* width: 40%; */
+    flex: 0.6;
     color: var(--secondary-color-900);
   }
 }

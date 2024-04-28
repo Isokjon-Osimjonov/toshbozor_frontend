@@ -26,7 +26,7 @@
   margin-bottom: 10px;
 }
 .text_paragraph {
-  font-size: 1.2em;
+  font-size: 1.3em;
   color: var(--primary-color-500);
 }
 .see_catalog_btn {
@@ -38,7 +38,7 @@
   color: var(--white-text);
   border: none;
   cursor: pointer;
-  font-size: 1.1em;
+  font-size: 1.2em;
   font-weight: 500;
   margin-top: 70px;
   transition: background-color 0.3s linear;
